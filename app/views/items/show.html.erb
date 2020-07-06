@@ -1,0 +1,10 @@
+<h1>Item Page</h1>
+
+<ul>
+  <li><%= @item.name %></li>
+  <li><%= @item.description %></li>
+  <li><%= @item.price %></li>
+  <li>Restaurant: <%= @item.restaurant.name %></li>
+</ul>  
+
+<p><%= link_to "back to items", items_path %></p>

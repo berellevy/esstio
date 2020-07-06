@@ -1,5 +1,21 @@
 # Yestaurant
 
+## tasks
+
+- rest pages
+- validations
+
+### Done
+
+- migrations
+- relationships
+- seeds
+- user show page
+- user index
+---
+
+---
+
 ## Alternate names
 
 - Esstaurant
@@ -14,17 +30,20 @@
 
 ## User Stories
 
-### as a **user** I want to
+### as a **user** I want to MVP ONE
 
 1. log in
 2. see all the restaurants near me
 3. browse the restaurants menu
 4. place an order
-5. check status of order
+5. check status of order - hold off till restaurant is made - 
 6. see all my orders
+7. delete an order
+8. create a new user
 
-### As a **restaurant** I want to
+### As a **restaurant** I want to MVP TWO
 
+1. restaurant login
 1. see my home page
 2. see open orders
    1. see how many open orders I have
@@ -190,36 +209,42 @@ order page
 
 - reviews table
 - favorites table
+- item quantity in order_item - 
 - restaurants
   - **methods**
   - new
   - edit
-- addresses with google distances
-- restaurant login
 - user has a feed of featured items
+- addresses with google distances
 - home page has like a feed of food facts and jokes
-- item quantity in order_item
+- order numbers start at one for each restaurant
+- order display page url is `'/restaurant/:id/order/:id'`
 
 
-    This README would normally document whatever steps are necessary to get the
-    application up and running.
+  
+---
 
-    Things you may want to cover:
+---
+  
+This README would normally document whatever steps are necessary to get the
+application up and running.
 
-    * Ruby version
+Things you may want to cover:
 
-    * System dependencies
+* Ruby version
 
-    * Configuration
+* System dependencies
 
-    * Database creation
+* Configuration
 
-    * Database initialization
+* Database creation
 
-    * How to run the test suite
+* Database initialization
 
-    * Services (job queues, cache servers, search engines, etc.)
+* How to run the test suite
 
-    * Deployment instructions
+* Services (job queues, cache servers, search engines, etc.)
 
-    * ...
+* Deployment instructions
+
+* ...

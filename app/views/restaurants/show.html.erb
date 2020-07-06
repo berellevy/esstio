@@ -1,0 +1,8 @@
+<h1>Restaurant Show</h1>
+
+<ul>
+  <li><%= @restaurant.name %></li>
+  <li><%= @restaurant.phone_number %></li>
+  <li><%= @restaurant.address %></li>
+  <li>Rating: <%= pluralize(@restaurant.rating, "stars") %></li>
+</ul>

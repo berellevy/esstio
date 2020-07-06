@@ -1,0 +1,12 @@
+<h1>Restaurants Index</h1>
+
+<ul>
+
+<% @restaurants.each do |restaurant| %>
+  <li><%= link_to restaurant.name, restaurant_path(restaurant) %></li>
+  <li><%= restaurant.rating %></li>
+  <li><%= restaurant.phone_number %></li>
+  <li><%= restaurant.address %></li>
+<% end %>
+
+</ul>
