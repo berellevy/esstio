@@ -9,11 +9,7 @@
 <%= form_for order do |f| %>
 
    <%= f.label :restaurant_id %>
-   <%= f.collection_select :restaurant_id, Restaurant.all, :id, :name %>
-
-    <%= f.label :user_id %>
-    <%= f.collection_select :user_id, User.all, :id, :name %>
-
+   <%= f.hidden_field :restaurant_id, value: restaurant.id %>
 
     <%= f.label :item_ids %>
     <table>

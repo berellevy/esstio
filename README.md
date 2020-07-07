@@ -1,7 +1,8 @@
 # Yestaurant
 
 ## tasks
-
+- fix up order show page
+- nav bar
 - rest pages
 - validations
 

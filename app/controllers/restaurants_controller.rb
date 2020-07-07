@@ -11,6 +11,7 @@ class RestaurantsController < ApplicationController
     @new_order = Order.new(restaurant: @restaurant)
   end
 
+  
 
 
 end

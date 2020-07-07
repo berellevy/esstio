@@ -10,6 +10,19 @@
   </head>
 
   <body>
+    <div class="nav bar">
+      <p>
+       
+        <% if @current_user %>
+          Welcome <%= @current_user.name %>!
+          <%= button_to "logout", sessions_logout_path, method: :delete %>    
+        <% else %>
+          <%= button_to "signup", new_user_path, method: :get %>
+          <%= button_to "login", new_login_path, method: :get %>
+        <% end %>
+       
+      </p>
+    </div>
     <%= yield %>
   </body>
 

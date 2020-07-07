@@ -16,7 +16,8 @@ class OrdersController < ApplicationController
   end
 
   def create 
-    @order = Order.new(order_params(:user_id, :restaurant_id, item_ids: []))
+    @order = Order.new(order_params(:restaurant_id, item_ids: []))
+    @order.user = @current_user
     
     if @order.save
       redirect_to order_path(@order)
