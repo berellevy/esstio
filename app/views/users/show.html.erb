@@ -1,8 +1,6 @@
 <h1>User Show</h1>
 <%= render partial: 'user', locals: {user: @user} %>
 
-<h3>Nearby Restaurants</h3>
-<%= link_to  %>
 
 <div>
   <h3>Open Orders</h3>
@@ -11,7 +9,23 @@
     <%= render partial: 'orders/orders_list', locals: {order: order} %>
 
     <% end %>
-  </table>  
+  </table> 
+
+  <%= link_to "All Orders", orders_path  %>
 </div>
 
-<p><%= link_to "back to index", users_path %></p>
+
+
+<h3>Top Restaurants Nearby</h3>
+<table>
+<% @top_five_restaurants.each do |restaurant|  %>
+
+  <tr>
+   <td> <%= link_to restaurant.name, restaurant_path(restaurant) %> </td>
+    <td><%= pluralize(restaurant.rating, "Star") %> </td>
+  </tr>
+
+<% end %>
+</table>
+
+<p><%= link_to "See All Restaurants", restaurants_path %> </p>

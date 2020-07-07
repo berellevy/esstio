@@ -7,8 +7,9 @@ class RestaurantsController < ApplicationController
   
   def show
     @restaurant = Restaurant.find(params[:id])
+    @items = @restaurant.items
+    @new_order = Order.new(restaurant: @restaurant)
   end
-  
 
 
 

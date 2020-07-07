@@ -6,3 +6,7 @@
   <li><%= @restaurant.address %></li>
   <li>Rating: <%= pluralize(@restaurant.rating, "stars") %></li>
 </ul>
+
+<h2>Menu</h2>
+
+<%= render partial: 'orders/form', locals: {order: @new_order, items: @items} %>

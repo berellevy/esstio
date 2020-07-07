@@ -1,0 +1,7 @@
+  <% items.each do |item| %>
+    <ul>
+      <li><%= link_to item.name, item_path(item) %></li>
+      <li><%= item.description %></li>
+    </ul>  
+  <% end %>
+  

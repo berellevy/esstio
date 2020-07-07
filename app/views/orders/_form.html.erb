@@ -1,4 +1,12 @@
-<%= form_for @order do |f| %>
+<div class=error-messages> 
+    <% if flash[:errors] %>
+        <% flash[:errors].each do |error| %>
+          <li>  <%= error %> </li>
+        <% end %>   
+    <% end %> 
+</div>
+
+<%= form_for order do |f| %>
 
    <%= f.label :restaurant_id %>
    <%= f.collection_select :restaurant_id, Restaurant.all, :id, :name %>
@@ -9,7 +17,7 @@
 
     <%= f.label :item_ids %>
     <table>
-    <%= f.collection_check_boxes :item_ids, Item.all, :id, :name do |i| %>
+    <%= f.collection_check_boxes :item_ids, items, :id, :name do |i| %>
        
         <%= i.label do %>
         <tr>

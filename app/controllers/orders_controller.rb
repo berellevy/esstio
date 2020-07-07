@@ -16,11 +16,13 @@ class OrdersController < ApplicationController
   end
 
   def create 
-    @order = Order.create(order_params(:user_id, :restaurant_id, item_ids: []))
-    if @order.valid?
+    @order = Order.new(order_params(:user_id, :restaurant_id, item_ids: []))
+    
+    if @order.save
       redirect_to order_path(@order)
     else 
-      render "new"
+      flash[:errors] = @order.errors.full_messages
+      redirect_to restaurant_path(params[:order][:restaurant_id])
     end
   end
 
