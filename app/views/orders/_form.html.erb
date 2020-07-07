@@ -1,0 +1,28 @@
+<%= form_for @order do |f| %>
+
+   <%= f.label :restaurant_id %>
+   <%= f.collection_select :restaurant_id, Restaurant.all, :id, :name %>
+
+    <%= f.label :user_id %>
+    <%= f.collection_select :user_id, User.all, :id, :name %>
+
+
+    <%= f.label :item_ids %>
+    <table>
+    <%= f.collection_check_boxes :item_ids, Item.all, :id, :name do |i| %>
+       
+        <%= i.label do %>
+        <tr>
+            <td><%= i.check_box  %> </td>
+            <td><%= i.text %></td>
+            <td>$<%= i.object.price %></td>
+        </tr>
+        <tr>
+            <td colspan="3"><%= i.object.description %></td>
+        </tr>
+        <% end %>
+    <% end%>
+    </table>
+    <%= f.submit %>
+<% end %>
+  

@@ -1,8 +1,17 @@
 <h1>User Show</h1>
-<ul>
-  <li><%= @user.name %></li>
-  <li><%= @user.address %></li>
-  <li><%= @user.phone_number %></li>
-</ul>
+<%= render partial: 'user', locals: {user: @user} %>
+
+<h3>Nearby Restaurants</h3>
+<%= link_to  %>
+
+<div>
+  <h3>Open Orders</h3>
+  <table>
+    <% @open_orders.each do |order| %>
+    <%= render partial: 'orders/orders_list', locals: {order: order} %>
+
+    <% end %>
+  </table>  
+</div>
 
 <p><%= link_to "back to index", users_path %></p>

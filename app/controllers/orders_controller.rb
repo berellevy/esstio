@@ -11,7 +11,18 @@ class OrdersController < ApplicationController
     @items = @order.items
   end
   
+  def new 
+      @order = Order.new 
+  end
 
+  def create 
+    @order = Order.create(order_params(:user_id, :restaurant_id, item_ids: []))
+    if @order.valid?
+      redirect_to order_path(@order)
+    else 
+      render "new"
+    end
+  end
 
   private
 
@@ -19,8 +30,8 @@ class OrdersController < ApplicationController
     @order = Order.find(params[:id])
   end
   
-  def order_params
-    params.require(:order).permit(:user, :restaurant, :date, items: [])
+  def order_params(*args)
+    params.require(:order).permit(args)
   end
   
 end
