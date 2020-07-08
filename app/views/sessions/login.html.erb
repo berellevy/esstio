@@ -1,17 +1,38 @@
+<div class='user-login'>
+  <% if flash[:error] %>
+    <div>
+      <p><%= flash[:error] %></p>
+    </div>
+  <% end %>
 
-<% if flash[:error] %>
-  <div>
-    <p><%= flash[:error] %></p>
-  </div>
-<% end %>
+  <%= form_for :session, url: "/sessions" do |f| %>
 
-<%= form_for :session, url: "/sessions" do |f| %>
+    <%= f.label :username %>
+    <%= f.text_field :username %>
 
-<%= f.label :username %>
-<%= f.text_field :username %>
+    <%= f.label :password %>
+    <%= f.text_field :password %>
 
-<%= f.label :password %>
-<%= f.text_field :password %>
+    <%= f.submit "login" %>
+  <% end %>
+</div>
 
-<%= f.submit "login" %>
-<% end %>
+
+<div class='restaurant-login'>
+  <% if flash[:error] %>
+    <div>
+      <p><%= flash[:error] %></p>
+    </div>
+  <% end %>
+
+  <%= form_for :session, url: "/sessions" do |f| %>
+
+    <%= f.label :username %>
+    <%= f.text_field :username %>
+
+    <%= f.label :password %>
+    <%= f.text_field :password %>
+
+    <%= f.submit "login" %>
+  <% end %>
+</div>

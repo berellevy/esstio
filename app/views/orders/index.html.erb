@@ -2,7 +2,7 @@
 
 <table>
   <% @orders.each do |order| %>
-    <%= render partial: 'orders_list', locals: {order: order} %>
+    <%= render partial: 'orders_list', locals: {order: order, restaurant: order.restaurant} %>
   <% end %>
   
 </table>

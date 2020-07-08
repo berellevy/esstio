@@ -2,7 +2,7 @@ class SessionsController < ApplicationController
   skip_before_action :auth_user, only: [:login, :create]
 
   def login
-    
+    return redirect_to user_path(session[:user_id]) if session[:user_id]
   end
   
   def create

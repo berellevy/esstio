@@ -6,7 +6,7 @@
   <h3>Open Orders</h3>
   <table>
     <% @open_orders.each do |order| %>
-    <%= render partial: 'orders/orders_list', locals: {order: order} %>
+    <%= render partial: 'orders/orders_list', locals: {order: order, restaurant: order.restaurant} %>
 
     <% end %>
   </table> 

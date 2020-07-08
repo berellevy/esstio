@@ -1,24 +1,24 @@
 class ItemsController < ApplicationController
   before_action :find_item, only: [:edit, :update, :show, :destroy]
-  def index
-    @items = Item.all
-  end
+  # def index
+  #   @items = Item.all
+  # end
 
   def show
   
   end
 
-  def edit
+  # def edit
   
-  end
+  # end
   
-  def update
-      if @item.update_attributes(item_params)
-        redirect_to @item
-      else
-        render 'edit'
-      end
-  end
+  # def update
+  #     if @item.update_attributes(item_params)
+  #       redirect_to @item
+  #     else
+  #       render 'edit'
+  #     end
+  # end
 
 
   

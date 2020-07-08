@@ -2,7 +2,7 @@ class OrdersController < ApplicationController
   before_action :find_order, only: [:edit, :update, :show, :destroy]
 
   def index
-    @orders = Order.all
+    @orders = @current_user.orders.all
   end
   
   def show
@@ -11,9 +11,9 @@ class OrdersController < ApplicationController
     @items = @order.items
   end
   
-  def new 
-      @order = Order.new 
-  end
+  # def new 
+  #     @order = Order.new 
+  # end
 
   def create 
     @order = Order.new(order_params(:restaurant_id, item_ids: []))

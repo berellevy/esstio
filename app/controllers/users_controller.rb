@@ -31,8 +31,8 @@ class UsersController < ApplicationController
       if @user.update_attributes(user_params)
         redirect_to @user
       else
-        flash[:errors] = 
-        render 'edit'
+        flash[:errors] = @user.errors.full_messages
+        redirect_to edit_user_path(@user)
       end
   end
   

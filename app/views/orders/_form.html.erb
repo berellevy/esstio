@@ -7,11 +7,9 @@
 </div>
 
 <%= form_for order do |f| %>
-
-   <%= f.label :restaurant_id %>
    <%= f.hidden_field :restaurant_id, value: restaurant.id %>
 
-    <%= f.label :item_ids %>
+
     <table>
     <%= f.collection_check_boxes :item_ids, items, :id, :name do |i| %>
        

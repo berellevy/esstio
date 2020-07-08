@@ -1,10 +1,10 @@
 # Yestaurant
 
 ## tasks
-- fix up order show page
-- nav bar
-- rest pages
-- validations
+- css!
+  - nav bar
+    - link to user home
+  - pics for food
 
 ### Done
 
@@ -13,6 +13,13 @@
 - seeds
 - user show page
 - user index
+- edit user - update user
+- fix up order show page
+- restaurant pages clean
+- validations
+- user clicks all orders
+- home page
+  
 ---
 
 ---
