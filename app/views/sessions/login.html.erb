@@ -1,3 +1,4 @@
+<h2>User Login</h2>
 <div class='user-login'>
   <% if flash[:error] %>
     <div>
@@ -5,7 +6,7 @@
     </div>
   <% end %>
 
-  <%= form_for :session, url: "/sessions" do |f| %>
+  <%= form_for :session, url: "/sessions/user" do |f| %>
 
     <%= f.label :username %>
     <%= f.text_field :username %>
@@ -17,7 +18,7 @@
   <% end %>
 </div>
 
-
+<h2>Restaurant Login</h2>
 <div class='restaurant-login'>
   <% if flash[:error] %>
     <div>
@@ -25,7 +26,7 @@
     </div>
   <% end %>
 
-  <%= form_for :session, url: "/sessions" do |f| %>
+  <%= form_for :session, url: "/sessions/restaurant" do |f| %>
 
     <%= f.label :username %>
     <%= f.text_field :username %>

@@ -1,0 +1,24 @@
+<h1>All Orders</h1>
+
+<table>
+
+  <% @orders.each do |order| %>
+    <tr> 
+      <td> Customer: <%= order.user.name %>. </td>
+      <td> <%= link_to "#{order.status.titleize} on #{order.updated_at}", order_path(order) %></td>
+      <td> $<%= order.total_price %></td>
+      
+      <% order.order_options.each do |option| %>
+        <% unless option == order.status %>
+        <td><%= button_to option.titleize, change_order_status_path(order), method: :patch, params: {status_option: option}%></td>
+        <% end %>
+      <% end %>
+    </tr>
+    <tr>
+      <td><%= order.user.phone_number %></td>
+    </tr>
+    <tr>
+      <td colspan="2"><%= order.user.address %></td>
+    </tr>
+  <% end %>
+</table>

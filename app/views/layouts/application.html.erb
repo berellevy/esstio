@@ -17,6 +17,9 @@
        
         <% if @current_user %>
           Welcome <%= @current_user.name %>!
+          <%= button_to "logout", sessions_logout_path, method: :delete %>
+        <% elsif @current_restaurant %>
+          Welcome <%= @current_restaurant.name %>!
           <%= button_to "logout", sessions_logout_path, method: :delete %>    
         <% else %>
           <%= button_to "signup", new_user_path, method: :get %>

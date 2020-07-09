@@ -1,0 +1,34 @@
+<h1>Order</h1>
+<table>
+  <tr> 
+    <td> Customer: <%= @order.user.name %>. </td>
+    <td> <%= "#{@order.status.titleize} on #{@order.updated_at}" %></td>
+    <td> $<%= @order.total_price %></td>
+  </tr>
+  <tr>
+    <td><%= @order.user.phone_number %></td>
+  </tr>
+  <tr>
+    <td colspan="2"><%= @order.user.address %></td>
+  </tr>
+</table>
+
+
+<h2>Order Items</h2>
+
+<table>  
+  <% @items.each do |item| %>
+    <tr>
+      <td><%=item.name%></td>
+      <td>$<%= item.price %></td>
+    </tr>
+  <% end %>
+  <tr class='total'>
+    <strong>
+      <td>Total: </td>
+      <td>$<%= @order.total_price %></td>
+    </strong>
+  </tr>
+
+</table>
+  

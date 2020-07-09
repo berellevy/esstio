@@ -15,23 +15,26 @@ def pluralize(num, text)
   return "#{num} #{text.pluralize(num)}"
 end
 
-10.times do
+10.times do |n|
   User.create(
     name: Faker::Name.name,
     address: Faker::Address.full_address,
     phone_number: Faker::Number.number(digits: 10),
-    password: "1234"
+    password: "1234",
+    username: "user#{n}"
   )
 end
 puts pluralize(User.all.length, "user") + " created"
 # let's add some restaurants
 
-10.times do
+10.times do |n|
   Restaurant.create(
     name: Faker::Restaurant.name,
     address: Faker::Address.full_address,
     phone_number: Faker::Number.number(digits: 10),
-    rating: rand(1..5)
+    rating: rand(1..5),
+    username: "r#{n}",
+    password: "1234"
   )
 end
 puts pluralize(Restaurant.all.length, "Restaurant") + " created"

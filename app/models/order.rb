@@ -8,6 +8,16 @@ class Order < ApplicationRecord
   validates :items, presence: true
 
 
+  def order_options
+    [
+      'recieved',
+      'out_for_delivery',
+      'delivered'
+    ]
+  end
+  
+
+
   def total_price
     items.sum(&:price)
   end
