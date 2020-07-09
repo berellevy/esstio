@@ -1,10 +1,13 @@
-<h1>Order</h1>
+<div id="order-header">
 
-<h4>Ordered from <%= link_to @restaurant.name, restaurant_path(@restaurant) %>. <%= @order.status.titleize %> on <%= @order.date %></h4>
-<hr>
+<h1 id=your-order>Your Order</h1>
+
+<h4 id=delivery-details>Ordered from <%= link_to @restaurant.name, restaurant_path(@restaurant) %>. <%= @order.status.titleize %> on <%= @order.date %></h4>
+</div>
+<div id="order-body">
 <h2>Order Items</h2>
 
-<table>  
+<table class="order-items">  
   <% @items.each do |item| %>
     <tr>
       <td><%=item.name%></td>
@@ -12,11 +15,12 @@
     </tr>
   <% end %>
   <tr class='total'>
-    <strong>
+
+
       <td>Total: </td>
       <td>$<%= @order.total_price %></td>
-    </strong>
   </tr>
 
 </table>
+</div>
   

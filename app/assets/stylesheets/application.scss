@@ -14,15 +14,11 @@
  *= require_self
  */
 
-
 $space-cadet: #1f3352ff;
 $olive-drab-3: #769a06ff;
 $congo-pink: #ec8c7fff;
 $gainsboro: #d8d9e1ff;
 $blond: #fcf2c3ff;
-
-
-
 body {
     background-color: #fff;
     // background-image: url(https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/ingredients-for-spring-vegetable-buddha-bowl-royalty-free-image-656873420-1558126238.jpg?crop=0.707xw:1.00xh;0.147xw,0&resize=640:*);
@@ -31,7 +27,6 @@ body {
     font-family: UberMoveText-Medium, sans-serif;
 }
 
-
 .parent {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
@@ -39,11 +34,11 @@ body {
     grid-template-rows: 80px auto;
     grid-column-gap: 10px;
     grid-row-gap: 10px;
-
 }
 
 .nav {
     grid-area: 1 / 1 / 2 / 6;
+    height: 60px;
 }
 
 .column {
@@ -72,7 +67,9 @@ body {
     text-align: center;
 }
 
+
 /* nav bar */
+
 .nav {
     background-color: rgb(238, 238, 238);
     margin: 0px auto 5px auto;
@@ -112,6 +109,4 @@ body {
     float: right;
 }
 
-.login-page {
-    
-}
+.login-page {}
