@@ -14,24 +14,17 @@
  *= require_self
  */
 
-.nav {
-    background: rgba(255, 255, 255);
-    -moz-box-shadow: 0 0 10px rgba(0, 0, 0, .3);
-    -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, .3);
-    box-shadow: 0 0 10px rgba(0, 0, 0, .3);
-    margin: 0px auto;
-    margin-bottom: 10px;
-    max-width: 800px;
-    padding: 2.25%;
-    width: 85%;
-    font-family: molle;
-    text-align: center;
-    vertical-align: middle;
-    border-radius: 20px;
-}
 
+$space-cadet: #1f3352ff;
+$olive-drab-3: #769a06ff;
+$congo-pink: #ec8c7fff;
+$gainsboro: #d8d9e1ff;
+$blond: #fcf2c3ff;
+
+
+/* nav bar */
 ul {
-    background-color: rgba(255, 255, 255, 0.8);
+    background-color: $congo-pink;
     margin: 0px auto 5px auto;
     border-radius: 25px;
     width: 85%;
@@ -44,8 +37,8 @@ ul li {
 }
 
 li:hover {
-    background-color: rgb(177, 254, 255);
-    transition-duration: 1s;
+    background-color: $gainsboro;
+    transition-duration: .7s;
 }
 
 .right {
