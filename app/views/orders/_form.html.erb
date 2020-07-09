@@ -1,14 +1,16 @@
-<div > 
+<div class="errors"> 
     <% if flash[:errors] %>
+      <ul>
         <% flash[:errors].each do |error| %>
           <li>  <%= error %> </li>
-        <% end %>   
+        <% end %>
+      </ul>   
     <% end %> 
 </div>
 
 <%= form_for order do |f| %>
    <%= f.hidden_field :restaurant_id, value: restaurant.id %>
-
+    <div class="menu-for-user">
     <%= f.collection_check_boxes :item_ids, items, :id, :name do |i| %>
        <div class="menu-item">
         <%= i.label do %>
@@ -19,6 +21,7 @@
         <% end %>
         </div>
     <% end%>
+    </div>
    <div class="user-menu-submit-buttom">
     <%= f.submit %>
     </div>

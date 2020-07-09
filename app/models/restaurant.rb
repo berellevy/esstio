@@ -10,6 +10,8 @@ class Restaurant < ApplicationRecord
   end
   
 
+  
+
   #  CLASS METHODS  #
   def self.top_rated(quantity = 5)
     self.all.order(rating: :desc).limit(quantity)

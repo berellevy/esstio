@@ -1,17 +1,17 @@
 
-<div class="restaurant-page-user">
-  <h1>Restaurants Index</h1>
+
+
+  <div id="res-index-title-for-user">
+    <h1>Restaurants</h1>
+  </div>
 
   <ul class="all-restaurant-ul">
-
-  <% @restaurants.each do |restaurant| %>
-    <div class="res-card">
-      <li><%= link_to restaurant.name, restaurant_path(restaurant) %></li>
-      <li><%= restaurant.rating %></li>
-      <li><%= restaurant.phone_number %></li>
-      <li><%= restaurant.address %></li>
-    <div>
-  <% end %>
-
+    <% @restaurants.each do |restaurant| %>
+      <div class="menu-item store-listing">
+        <li><h4><%= link_to restaurant.name, restaurant_path(restaurant) %></h4></li>
+        <li><p> Rating: <%= pluralize(restaurant.rating, "star") %></p></li>
+        <li><p></p><%= restaurant.phone_number_display %></p></li>
+        <li><%= restaurant.address %></li>
+      </div>
+    <% end %>
   </ul>
-</div>

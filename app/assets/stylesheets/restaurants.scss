@@ -12,14 +12,14 @@ restaurant-page-user {}
 }
 
 .menu-for-user {
-    grid-area: 4 / 1 / 10 / 6;
+    grid-area: 4 / 1 / 5 / 6;
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
 }
 
 .user-menu-submit-buttom {
-    grid-area: 10 / 1 / 11 / 6;
+    grid-area: 6 / 1 / 7 / 6;
     padding: 20px;
     padding-bottom: 100px;
 }
@@ -38,14 +38,6 @@ restaurant-page-user {}
 
 .new_order {
     display: contents;
-}
-
-.all-restaurant-ul {
-    list-style: none;
-    display: flex;
-    flex-wrap: wrap;
-    width: 99%;
-    height: auto;
 }
 
 .res-card {
@@ -79,4 +71,31 @@ table.order-items tr td {
 
 tr.total {
     font-weight: bold;
+}
+
+// restaurant index css
+.all-restaurant-ul {
+    grid-area: 3 / 1 / 4 / 6;
+    list-style: none;
+    display: flex;
+    flex-flow: row wrap;
+    width: 99%;
+    height: auto;
+    padding: 5px;
+}
+
+#res-index-title-for-user {
+    grid-area: 2 / 1 / 3 / 6
+}
+
+.errors ul {
+    padding: 5px;
+    border-radius: 3px;
+    background-color: lightpink;
+    list-style: none;
+    text-align: center;
+}
+
+div#login-title {
+    grid-area: 2 / 1 / 3 / 6;
 }

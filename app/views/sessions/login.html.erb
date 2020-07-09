@@ -1,11 +1,20 @@
-<div class="login-page">
+  
+  <div id="login-title">
+    <h1>Welcome to Nostaurant</h1>
+  </div>
+  
+  
+  <div class="menu-item">
   <h2>User Login</h2>
-  <div>
-    <% if flash[:error] %>
-      <div>
-        <p><%= flash[:error] %></p>
-      </div>
-    <% end %>
+
+    <div class="errors"> 
+      <% if flash[:user_error] %>
+        <ul>
+
+            <li>  <%= flash[:user_error] %> </li>
+        </ul>   
+      <% end %> 
+    </div>
 
     <%= form_for :session, url: "/sessions/user" do |f| %>
 
@@ -19,13 +28,16 @@
     <% end %>
   </div>
 
+<div class="menu-item">
   <h2>Restaurant Login</h2>
   <div>
-    <% if flash[:error] %>
-      <div>
-        <p><%= flash[:error] %></p>
-      </div>
-    <% end %>
+    <div class="errors"> 
+      <% if flash[:res_error] %>
+        <ul>
+            <li>  <%= flash[:res_error] %> </li>
+        </ul>   
+      <% end %> 
+  </div>
 
     <%= form_for :session, url: "/sessions/restaurant" do |f| %>
 
@@ -38,4 +50,3 @@
       <%= f.submit "login" %>
     <% end %>
   </div>
-</div>

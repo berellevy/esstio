@@ -12,13 +12,13 @@ class SessionsController < ApplicationController
   def create_user
     user = User.find_by(username: params[:session][:username])
     if !user
-      flash[:error] = "User not found"
+      flash[:user_error] = "User not found"
       redirect_to new_login_path
     elsif user.authenticate(params[:session][:password])
       session[:user_id] = user.id
       redirect_to user
     else
-      flash[:error] = "Password incorrect"
+      flash[:user_error] = "Password incorrect"
       redirect_to new_login_path
     end
   end
@@ -26,13 +26,13 @@ class SessionsController < ApplicationController
   def create_restaurant
     restaurant = Restaurant.find_by(username: params[:session][:username])
     if !restaurant
-      flash[:error] = "Restaurant not found"
+      flash[:res_error] = "Restaurant not found"
       redirect_to new_login_path
     elsif restaurant.authenticate(params[:session][:password])
       session[:restaurant_id] = restaurant.id
       redirect_to restaurant
     else
-      flash[:error] = "Password incorrect"
+      flash[:res_error] = "Password incorrect"
       redirect_to new_login_path
     end
   end
