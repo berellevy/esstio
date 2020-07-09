@@ -40,7 +40,7 @@ class UsersController < ApplicationController
 
   def find_user
     @user = User.find_by(id: params[:id])
-    return redirect_to user_path(session[:user_id]) unless @user == @current_user 
+    return redirect_to new_login_path unless @user == @current_user 
   end
   
   

@@ -2,7 +2,11 @@ class SessionsController < ApplicationController
   skip_before_action :auth_user, only: [:login, :create_user, :create_restaurant]
 
   def login
-    return redirect_to user_path(session[:user_id]) if session[:user_id]
+    if session[:user_id]
+      redirect_to user_path(session[:user_id])
+    elsif session[:restaurant_id]
+      redirect_to restaurant_path(session[:restaurant_id])
+    end
   end
   
   def create_user
