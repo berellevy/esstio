@@ -1,39 +1,41 @@
-<h2>User Login</h2>
-<div>
-  <% if flash[:error] %>
-    <div>
-      <p><%= flash[:error] %></p>
-    </div>
-  <% end %>
+<div class="login-page">
+  <h2>User Login</h2>
+  <div>
+    <% if flash[:error] %>
+      <div>
+        <p><%= flash[:error] %></p>
+      </div>
+    <% end %>
 
-  <%= form_for :session, url: "/sessions/user" do |f| %>
+    <%= form_for :session, url: "/sessions/user" do |f| %>
 
-    <%= f.label :username %>
-    <%= f.text_field :username %>
+      <%= f.label :username %>
+      <%= f.text_field :username %>
 
-    <%= f.label :password %>
-    <%= f.text_field :password %>
+      <%= f.label :password %>
+      <%= f.text_field :password %>
 
-    <%= f.submit "login" %>
-  <% end %>
-</div>
+      <%= f.submit "login" %>
+    <% end %>
+  </div>
 
-<h2>Restaurant Login</h2>
-<div>
-  <% if flash[:error] %>
-    <div>
-      <p><%= flash[:error] %></p>
-    </div>
-  <% end %>
+  <h2>Restaurant Login</h2>
+  <div>
+    <% if flash[:error] %>
+      <div>
+        <p><%= flash[:error] %></p>
+      </div>
+    <% end %>
 
-  <%= form_for :session, url: "/sessions/restaurant" do |f| %>
+    <%= form_for :session, url: "/sessions/restaurant" do |f| %>
 
-    <%= f.label :username %>
-    <%= f.text_field :username %>
+      <%= f.label :username %>
+      <%= f.text_field :username %>
 
-    <%= f.label :password %>
-    <%= f.text_field :password %>
+      <%= f.label :password %>
+      <%= f.text_field :password %>
 
-    <%= f.submit "login" %>
-  <% end %>
+      <%= f.submit "login" %>
+    <% end %>
+  </div>
 </div>

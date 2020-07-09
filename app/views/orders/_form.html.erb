@@ -9,22 +9,17 @@
 <%= form_for order do |f| %>
    <%= f.hidden_field :restaurant_id, value: restaurant.id %>
 
-
-    <table>
     <%= f.collection_check_boxes :item_ids, items, :id, :name do |i| %>
-       
+       <div class="menu-item">
         <%= i.label do %>
-        <tr>
-            <td><%= i.check_box  %> </td>
-            <td><%= i.text %></td>
-            <td>$<%= i.object.price %></td>
-        </tr>
-        <tr>
-            <td colspan="3"><%= i.object.description %></td>
-        </tr>
+            <h4><%= i.text %> </h4>
+            <p><%= i.object.description %> <p>
+            $<%= i.object.price %>
+            <%= i.check_box  %> 
         <% end %>
+        </div>
     <% end%>
-    </table>
+   
     <%= f.submit %>
 <% end %>
   

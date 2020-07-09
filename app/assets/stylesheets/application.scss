@@ -22,25 +22,96 @@ $gainsboro: #d8d9e1ff;
 $blond: #fcf2c3ff;
 
 
-/* nav bar */
-ul {
-    background-color: $congo-pink;
-    margin: 0px auto 5px auto;
-    border-radius: 25px;
+
+body {
+    background-color: #fff;
+    // background-image: url(https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/ingredients-for-spring-vegetable-buddha-bowl-royalty-free-image-656873420-1558126238.jpg?crop=0.707xw:1.00xh;0.147xw,0&resize=640:*);
     width: 85%;
-    max-width: 960px;
+    margin: 0px auto;
+    font-family: UberMoveText-Medium, sans-serif;
 }
 
-ul li {
+
+.parent {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(10, 1fr);
+    grid-template-rows: 80px auto;
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+
+}
+
+.nav {
+    grid-area: 1 / 1 / 2 / 6;
+}
+
+.column {
+    padding-top: 0px;
+    background-color: $gainsboro;
+    border-radius: 10px;
+    padding: 15px;
+}
+
+.left.column {
+    grid-area: 2 / 1 / 11 / 3;
+    // background-color: $gainsboro;
+    display: flex;
+    flex-direction: column;
+}
+
+.middle.column {
+    grid-area: 2 / 3 / 11 / 5;
+}
+
+.right.column {
+    grid-area: 2 / 5 / 11 / 6;
+}
+
+.column h3 {
+    text-align: center;
+}
+
+/* nav bar */
+.nav {
+    background-color: rgb(238, 238, 238);
+    margin: 0px auto 5px auto;
+    border-radius: 10px;
+    width: 100%;
+    // height: 40%;
+}
+
+.nav ul {
+    padding: 0px;
+    margin: 0px;
+}
+
+.nav li {
+    border-radius: 10px;
     display: inline-block;
     padding: 20px;
+    margin: 0px auto;
 }
 
-li:hover {
+.nav li a {
+    text-decoration: none;
+    color: $space-cadet;
+    height: 100%;
+}
+
+.nav li:hover {
     background-color: $gainsboro;
     transition-duration: .7s;
 }
 
+#logout-button {
+    float: right;
+}
+
 .right {
     float: right;
+}
+
+.login-page {
+    
 }

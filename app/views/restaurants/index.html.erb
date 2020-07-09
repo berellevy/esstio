@@ -1,12 +1,17 @@
-<h1>Restaurants Index</h1>
 
-<ul>
+<div class="restaurant-page-user">
+  <h1>Restaurants Index</h1>
 
-<% @restaurants.each do |restaurant| %>
-  <li><%= link_to restaurant.name, restaurant_path(restaurant) %></li>
-  <li><%= restaurant.rating %></li>
-  <li><%= restaurant.phone_number %></li>
-  <li><%= restaurant.address %></li>
-<% end %>
+  <ul class="all-restaurant-ul">
 
-</ul>
+  <% @restaurants.each do |restaurant| %>
+    <div class="res-card">
+      <li><%= link_to restaurant.name, restaurant_path(restaurant) %></li>
+      <li><%= restaurant.rating %></li>
+      <li><%= restaurant.phone_number %></li>
+      <li><%= restaurant.address %></li>
+    <div>
+  <% end %>
+
+  </ul>
+</div>

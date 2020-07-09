@@ -1,9 +1,10 @@
-<h1>User Show</h1>
+<div class="right column">
+<h3>Info</h3>
 <%= render partial: 'user', locals: {user: @user} %>
+</div>
 
-
-<div>
-  <h3>Open Orders</h3>
+<div class="left column">
+  <h3 class="top-item">Open Orders</h3>
   <table>
     <% @open_orders.each do |order| %>
     <%= render partial: 'orders/orders_list', locals: {order: order, restaurant: order.restaurant} %>
@@ -15,7 +16,7 @@
 </div>
 
 
-
+<div class="middle column">
 <h3>Top Restaurants Nearby</h3>
 <table>
 <% @top_five_restaurants.each do |restaurant|  %>
@@ -27,5 +28,5 @@
 
 <% end %>
 </table>
+</div>
 
-<p><%= link_to "See All Restaurants", restaurants_path %> </p>

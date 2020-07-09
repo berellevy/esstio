@@ -1,12 +1,15 @@
-<h1>Restaurant Show</h1>
 
+<div class="res-info-show-user">
 <ul>
   <li><%= @restaurant.name %></li>
   <li><%= @restaurant.phone_number %></li>
   <li><%= @restaurant.address %></li>
   <li>Rating: <%= pluralize(@restaurant.rating, "stars") %></li>
 </ul>
+</div>
 
 <h2>Menu</h2>
+<div class="menu-for-user">
 
 <%= render partial: 'orders/form', locals: {order: @new_order, items: @items, restaurant: @restaurant} %>
+</div>
