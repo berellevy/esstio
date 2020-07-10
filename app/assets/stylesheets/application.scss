@@ -111,4 +111,12 @@ body {
 
 .login-page {}
 
+.second-bar {
+    grid-area: 2 / 1 / 3 / 6;
+    ;
+}
 
+#user-edit-form {
+    width: fit-content;
+    text-align: left;
+}

@@ -32,7 +32,7 @@ class OrdersController < ApplicationController
     redirect_to restaurant_path(@current_restaurant) unless @order.restaurant == @current_restaurant
     @order.status =  params[:status_option]
     @order.save
-    redirect_to restaurant_path(@current_restaurant)
+    redirect_back fallback_location: restaurant_path(@current_restaurant)
   end
   
 

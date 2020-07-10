@@ -1,19 +1,19 @@
-<div class="right column">
-<h1>Restaurant Show</h1>
+<div class="right column res-info">
+<h1>Restaurant info</h1>
 
 <ul>
-  <li><%= @restaurant.name %></li>
-  <li><%= @restaurant.phone_number %></li>
-  <li><%= @restaurant.address %></li>
-  <li>Rating: <%= pluralize(@restaurant.rating, "stars") %></li>
+  <li><h4><%= @restaurant.name %></h4></li>
+  <li><p><%= @restaurant.phone_number %></p></li>
+  <li><p><%= @restaurant.address %></p></li>
+  <li><p>Rating: <%= pluralize(@restaurant.rating, "stars") %></p></li>
 </ul>
 </div>
 
 
-<h3>Open orders</h3>
 <div class="left column-res">
-
+<h3>Open orders</h3>
   <% @open_orders.each do |order| %>
+    <div class="tile-fit-contents">
     <div class="order-info">
       <h3> Customer: <%= order.user.name %>. </h3>
       <p> <%= link_to "#{order.status.titleize} on #{order.updated_at}", order_path(order) %></p>
@@ -27,8 +27,7 @@
         <%= button_to option.titleize, change_order_status_path(order), method: :patch, params: {status_option: option}%>
         <% end %>
       <% end %>
-    
-
+    </div>
     </div>
   <% end %>
   </div>
