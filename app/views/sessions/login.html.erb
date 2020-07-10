@@ -17,14 +17,17 @@
     </div>
 
     <%= form_for :session, url: "/sessions/user" do |f| %>
-
-      <%= f.label :username %>
-      <%= f.text_field :username %>
-
-      <%= f.label :password %>
-      <%= f.text_field :password %>
-
-      <%= f.submit "login" %>
+      <p>
+        <%= f.label :username %>
+        <%= f.text_field :username %>
+      </p>
+      <p>
+        <%= f.label :password %>
+        <%= f.text_field :password %>
+      </p>
+      <p>
+        <%= f.submit "login" %>
+      </p>
     <% end %>
   </div>
 
@@ -40,13 +43,16 @@
   </div>
 
     <%= form_for :session, url: "/sessions/restaurant" do |f| %>
-
-      <%= f.label :username %>
-      <%= f.text_field :username %>
-
-      <%= f.label :password %>
-      <%= f.text_field :password %>
-
-      <%= f.submit "login" %>
+      <p>
+        <%= f.label :username %>
+        <%= f.text_field :username %>
+      </p>
+      <p>
+        <%= f.label :password %>
+        <%= f.text_field :password %>
+      </p>
+      <p>
+        <%= f.submit "login" %>
+      </p>
     <% end %>
   </div>

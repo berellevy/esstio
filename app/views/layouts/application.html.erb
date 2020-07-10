@@ -16,17 +16,18 @@
 
         <% if @current_user %>
           <li>Welcome <%= link_to @current_user.name, user_path(@current_user) %>! </li> 
+          <li><%= link_to "All Orders", orders_path  %></li>
           <li><%= link_to "All Restaurants", restaurants_path %> </li>
-          <li><%= link_to "edit info", edit_user_path(@current_user) %></li>
-           <li id="logout-button"> <%= link_to "logout", sessions_logout_path, method: :delete %> </li>
+          <li><%= link_to "Edit Info", edit_user_path(@current_user), data: {turbolinks: false} %></li>
+           <li id="logout-button"> <%= link_to "Logout", sessions_logout_path, method: :delete %> </li>
 
         <% elsif @current_restaurant %>
           <li>Welcome <%= link_to @current_restaurant.name, restaurant_path(@current_restaurant) %>! </li>
           <li><%= link_to "View Menu", items_path %></li>
-          <li><%= link_to "all orders", orders_path %></li>
-          <li id="logout-button"><%= link_to "logout", sessions_logout_path, method: :delete %> </li>
+          <li><%= link_to "All Orders", orders_path %></li>
+          <li id="logout-button"><%= link_to "Logout", sessions_logout_path, method: :delete %> </li>
         <% else %>
-         <li><%= link_to "signup", new_user_path %></li> 
+         <li><%= link_to "signup", new_user_path, data: {turbolinks: false} %></li> 
          <li><%= link_to "login", new_login_path %> </li> 
         <% end %>
       </ul>

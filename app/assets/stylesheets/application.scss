@@ -49,14 +49,14 @@ body {
 }
 
 .left.column {
-    grid-area: 2 / 1 / 11 / 3;
+    grid-area: 2 / 1 / 11 / 4;
     // background-color: $gainsboro;
     display: flex;
     flex-direction: column;
 }
 
 .middle.column {
-    grid-area: 2 / 3 / 11 / 5;
+    grid-area: 2 / 4 / 11 / 5;
 }
 
 .right.column {
@@ -119,4 +119,38 @@ body {
 #user-edit-form {
     width: fit-content;
     text-align: left;
+}
+
+ul#user-info {
+    padding: 5px;
+    list-style: none;
+}
+
+ul#user-info li {
+    margin-top: 13px;
+}
+
+div#row-three {
+    grid-area: 3 / 1 / 4 / 6;
+}
+
+h2#menu-title-for-user {
+    text-align: center;
+}
+
+div.second-row {
+    grid-area: 2 / 1 / 3 / 6;
+}
+
+div.third-row {
+    grid-area: 3 / 1 / 4 / 6;
+}
+
+.item-form p {
+    text-align: left;
+}
+
+.item-form p textarea {
+    width: 50em;
+    height: 5em;
 }

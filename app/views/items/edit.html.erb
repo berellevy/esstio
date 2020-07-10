@@ -1,35 +1,7 @@
+
 <div class="second-row">
-<h1>Edit <%= @item.name %></h1>
-
-<% if flash[:errors] %>
-  <div class="tile-fit-contents">
-    <% flash[:errors].each do |error| %>
-      <p><%= error %> </p> 
-    <% end %>
-  </div>
-<% end %>
-
-<%# <div class="tile-fit-contents menu-for-restaurant"> %>
-<%= form_for @item do |f| %>
-  <div class="tile-fit-contents">
-    <p>
-      <%= f.label :name %>
-      <%= f.text_field :name %>
-    </p>
-    <p class=edit-for-item>
-      <%= f.label :description %>
-      <%= f.text_area :description %>
-    </p>
-    <P>
-      <%= f.label :price %>
-      <%= f.number_field :price %>
-    </P>
-    <p>
-      <%= f.submit %>
-    </p>
-  </div>
-<% end %>
-<%# </div> %>
-<%= button_to "back to menu", items_path, method: :get %>
-
+  <h1>Edit <%= @item.name %></h1>
 </div>
+
+
+<%= render 'form' %>

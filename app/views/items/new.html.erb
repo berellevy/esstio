@@ -1,21 +1,4 @@
-<h1>Add an item </h1>
-
-<% if flash[:errors] %>
-  <% flash[:errors].each do |error| %>
-    <p> <%= error %> </p>  
-  <% end %>
-<% end %>
-
-<%= form_for @item do |f| %>
-  <%= f.label :name %>
-  <%= f.text_field :name %>
-  
-  <%= f.label :description %>
-  <%= f.text_area :description %>
-
-  <%= f.label :price %>
-  <%= f.number_field :price %>
-
-  <%= f.submit %>
-<% end %>
-<%= button_to "back to menu", items_path, method: :get %>
+<div class="second-row">
+  <h1>Add an item </h1>
+</div>
+<%= render 'form' %>

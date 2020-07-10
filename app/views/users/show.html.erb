@@ -1,10 +1,13 @@
 
-<div class="right column">
-<h3>Info</h3>
-<%= render partial: 'user', locals: {user: @user} %>
-</div>
 
 <div class="left column">
+
+<% if @open_orders.length == 0 %>
+  <h2>You have no open orders</h2>
+<% else %>
+
+
+
   <h3 class="top-item">Open Orders</h3>
   <table>
     <% @open_orders.each do |order| %>
@@ -12,8 +15,10 @@
 
     <% end %>
   </table> 
+  
+<% end %>
 
-  <%= link_to "All Orders", orders_path  %>
+
 </div>
 
 
@@ -29,4 +34,10 @@
 
 <% end %>
 </table>
+</div>
+
+
+<div class="right column">
+<h3>My Info</h3>
+<%= render partial: 'user', locals: {user: @user} %>
 </div>
