@@ -1,8 +1,12 @@
-<h1>All orders</h1>
+<div class="second-row">
+  <h1>All orders</h1>
+</div>
 
-<table>
+<div class="third-row flex-box-one-column">
   <% @orders.each do |order| %>
-    <%= render partial: 'orders_list', locals: {order: order, restaurant: order.restaurant} %>
+    <div class="tile-fit-contents">
+      <%= render partial: 'orders_list', locals: {order: order, restaurant: order.restaurant} %>
+    </div>
   <% end %>
   
-</table>
+</div>

@@ -1,7 +1,13 @@
-<tr> 
-    <td> Ordered from <%= link_to restaurant.name, restaurant_path(restaurant) %>. </td>
-    <td> <%= link_to "#{order.status.titleize} on #{order.date}", order_path(order) %></td>
-    <td> $<%= order.total_price %></td>
- </tr>
+    
+<p> 
+  Ordered from <%= link_to restaurant.name, restaurant_path(restaurant) %>. <%="#{order.status.titleize} on #{order.date}"%>
+</p>
+
+<p>
+  <%= link_to "View Details", order_path(order) %>
+</p>
+
+<p> $<%= order.total_price %></p>
+
    
  
