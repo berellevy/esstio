@@ -1,6 +1,6 @@
 <h1>Edit <%= @item.name %></h1>
 
-% if flash[:errors] %>
+<% if flash[:errors] %>
   <% flash[:errors].each do |error| %>
    <p><%= error %> </p> 
   <% end %>

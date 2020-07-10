@@ -1,3 +1,73 @@
 // Place all the styles related to the users controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+
+$space-cadet: #1f3352ff;
+$olive-drab-3: #769a06ff;
+$congo-pink: #ec8c7fff;
+$gainsboro: #d8d9e1ff;
+$blond: #fcf2c3ff;
+
+.res-info-show-restaurant {
+    grid-area: 2 / 1 / 3 / 6;
+}
+
+.menu-container {
+    grid-area: 4 / 1 / 5 / 6;
+}
+
+.menu-for-restaurant {
+    // grid-area: 4 / 1 / 5 / 6;
+    background-color: #eeeeee;
+    border-radius: 7px;
+    padding: 10px;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    width: 53em;
+}
+
+.menu-btns {
+    display: flex;
+    justify-content: center;
+}
+
+.column-res {
+    padding-top: 0px;
+    background-color: $gainsboro;
+    border-radius: 10px;
+    padding: 15px;
+}
+
+.left.column-res {
+    grid-area: 4 / 1 / 8 / 5;
+    flex-direction: column;
+}
+
+.order-info {
+    margin: 0;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px;
+}
+
+.status-bts {
+    margin: 0;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+.res-order {
+    margin: 0;
+    background-color: #eeeeee;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px;
+    width: 50em;
+}
